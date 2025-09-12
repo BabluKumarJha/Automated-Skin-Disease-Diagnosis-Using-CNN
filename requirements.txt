@@ -1,5 +1,5 @@
-torch==2.7.1 ﻿#torch==2.7.1+cu118 instead of this using torch==2.7.1 for streamlit cloud.
-torchvision==0.22.1 #torchvision==0.22.1+cu118
+torch==2.7.1
+torchvision==0.22.1 
 torchinfo==1.8.0
 streamlit==1.49.1
 Pillow==11.0.0
@@ -8,3 +8,4 @@ numpy==2.1.2
 pandas==2.3.2
 
 matplotlib==3.10.5
+
