@@ -7,7 +7,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 
 # device agnositc code
-device = torch.device("cuda" if torch.cuda.is_avaliable() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
 
 
 # Class names
@@ -111,5 +111,6 @@ if "input_type" in st.session_state:
             else:
 
                 st.warning("Please upload or capture an image before submitting.")
+
 
 
