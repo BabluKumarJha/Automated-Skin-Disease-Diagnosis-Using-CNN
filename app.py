@@ -57,6 +57,7 @@ test_transform = transforms.Compose(
 ###################################################
 #### Streamlit code
 #########################################
+st.write("Note: This project is under research and development")
 st.title("Apna Skin Clinic & Diagnosis Center ")
 st.header("Identify your disease via using skin image.")
 
@@ -111,6 +112,7 @@ if "input_type" in st.session_state:
             else:
 
                 st.warning("Please upload or capture an image before submitting.")
+
 
 
 
