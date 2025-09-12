@@ -2,8 +2,8 @@
 import torch
 import streamlit as st
 import torchvision.transforms as transforms
-from model import device
-from data import class_names
+from script_folder.model import device
+from script_folder.data import class_names
 from PIL import Image
 
 
@@ -96,4 +96,5 @@ if "input_type" in st.session_state:
                 st.write(f"Prediction: {pred} | Confidence: {confidence * 100:.2f}%")
                 st.image(image, caption=f"Prediction: {pred} | Confidence: {confidence * 100:.2f}%", use_column_width=False)
             else:
+
                 st.warning("Please upload or capture an image before submitting.")
