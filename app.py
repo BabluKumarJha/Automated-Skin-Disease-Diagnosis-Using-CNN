@@ -3,11 +3,23 @@ import torch
 import streamlit as st
 import torchvision.transforms as transforms
 # from script_folder.model import device # for streamlit cloud we have to comment, due to this getting error.
-from script_folder.data import class_names
+# from script_folder.data import class_names
 from PIL import Image
 
 # device agnositc code
 device = torch.device("cuda" if torch.cuda.is_avaliable() else 'cpu')
+
+
+# Class names
+class_names = ['Acitinic Keratosis',
+ 'Basal Cell Carcinoma',
+ 'Dermatofibroma',
+ 'Melanoma',
+ 'Nevus',
+ 'Pigmented Benign Keratosis',
+ 'Seborrheic Keratosis',
+ 'Squamous Cell Carcinoma',
+ 'Vascular Lesion']
 
 model = torch.load("resnet_model_07.pth", weights_only=False)
 model.to(device)
@@ -99,4 +111,5 @@ if "input_type" in st.session_state:
             else:
 
                 st.warning("Please upload or capture an image before submitting.")
+
 
